@@ -10,6 +10,12 @@ function onload(){
         root.style.setProperty("--textcolor","#ffffff");
     }
     else if(dark=="no"){
+        root.style.setProperty("--link", "#000000");
+        root.style.setProperty("--linkvisited", "#101000");
+        root.style.setProperty("--linkhover", "#ffffff");
+        root.style.setProperty("--linkactive", "#202020");
+        root.style.setProperty("--background","#ffffff");
+        root.style.setProperty("--textcolor","#000000");
     }
     else{
         localStorage.setItem("dark-mode","yes");
