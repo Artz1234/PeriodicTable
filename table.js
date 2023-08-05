@@ -20,7 +20,6 @@ function onload(){
     }
     else{
         localStorage.setItem("dark-mode","yes");
-        body.classList.add("dark-mode");
         root.style.setProperty("--link", "#ffffff");
         root.style.setProperty("--linkvisited", "#eeeeff");
         root.style.setProperty("--linkhover", "#000000");
