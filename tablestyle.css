@@ -3,6 +3,7 @@
   --linkvisited: #101000;
   --linkhover:#ffffff;
   --linkactive:#202020; 
+  --minwidth:1px;
 }
 /*Scrollbar*/
 ::-webkit-scrollbar {
@@ -115,4 +116,8 @@ a:active {
 }
 .tooltip:hover .tooltiptextlefttop {
     visibility: visible;
+}
+/*Table*/
+td{
+    min-width: var(--minwidth);
 }

@@ -1,5 +1,6 @@
 function onload(){
     var dark=localStorage.getItem("dark-mode");
+    var square=localStorage.getItem("square");
     var root = document.querySelector(":root");
     if(dark=="yes"){
         root.style.setProperty("--link", "#ffffff");
@@ -26,5 +27,11 @@ function onload(){
         root.style.setProperty("--linkactive", "#ffffff");
         root.style.setProperty("--background","#101010");
         root.style.setProperty("--textcolor","#ffffff");
+    }
+    if(square=="yes"){
+        root.style.setProperty("--minwidth","53px");
+    }
+    else if(square=="no"){
+        root.style.setProperty("--minwidth","1px");
     }
 }

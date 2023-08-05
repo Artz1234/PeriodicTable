@@ -19,10 +19,24 @@
                     localStorage.setItem("dark-mode","no");
                 }
             }
+            function setsquare() {
+                var checkBox = document.getElementById("squarecheckbox");
+                var root = document.querySelector(":root");
+                if (checkBox.checked == true){
+                    localStorage.removeItem("square");
+                    localStorage.setItem("square","yes");
+                }
+                else {
+                    localStorage.removeItem("square");
+                    localStorage.setItem("square","no");
+                }
+            }
             function onload(){
                 var dark=localStorage.getItem("dark-mode");
+                var square=localStorage.getItem("square");
                 var root = document.querySelector(":root");
                 var checkBox = document.getElementById("darkmodecheckbox");
+                var checkBox1 = document.getElementById("squarecheckbox");
                 if(dark=="yes"){
                     root.style.setProperty("--background","#101010");
                     root.style.setProperty("--textcolor","#ffffff");
@@ -35,12 +49,21 @@
                     root.style.setProperty("--textcolor","#ffffff");
                     checkBox.click();
                 }
+                if(square=="yes"){
+                    checkBox1.click();
+                }
+                else if(square=="no"){
+                }
+                else{
+                    checkBox1.click();
+                }
             }
         </script>
     </head>
     <body onload="onload()">
         <h2>Settings</h2>
-        Dark Mode: <input type="checkbox" id="darkmodecheckbox" onclick="settheme()"><br/><br/>
+        <input type="checkbox" id="darkmodecheckbox" onclick="settheme()">Dark Mode<br/>
+        <input type="checkbox" id="squarecheckbox" onclick="setsquare()">Don't Squeeze Elements To Adapt For Small Screens<br/><br/>
         <a href="index.html">Go back</a>
     </body>
 </html>
