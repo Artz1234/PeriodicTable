@@ -1,3 +1,10 @@
+:root {
+  --link: #000000;
+  --linkvisited: #101000;
+  --linkhover:#ffffff;
+  --linkactive:#202020; 
+}
+/*Scrollbar*/
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -11,26 +18,37 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555555; 
 }
+/*Links*/
 a:link {
-    color: #ffffff;
+    color: var(--link);
     background-color: transparent;
     text-decoration: none;
-}      
+} 
 a:visited {
-    color: #eeeeff;
+    color: var(--linkvisited);
     background-color: transparent;
     text-decoration: none;
 }
+.linkvisiteddarkmode{
+    color: #eeeeff
+} 
 a:hover {
+    color: var(--linkhover);
+    background-color: transparent;
+    text-decoration: underline;
+}
+.linkhoverdarkmode{
     color: #000000;
-    background-color: transparent;
-    text-decoration: underline;
-}
+} 
 a:active {
-    color: #ffffff;
+    color: var(--linkactive);
     background-color: transparent;
     text-decoration: underline;
 }
+.linkactivedarkmode{
+    color: #ffffff;
+}
+/*Tooltips*/
 .tooltip {
     position: relative;
     display: inline-block;
@@ -39,7 +57,7 @@ a:active {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: auto;
-    background-color: black;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -51,7 +69,7 @@ a:active {
 .tooltip .tooltiptextleft {
     visibility: hidden;
     width: auto;
-    background-color: black;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -70,7 +88,7 @@ a:active {
 .tooltip .tooltiptexttop {
     visibility: hidden;
     width: auto;
-    background-color: black;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -82,7 +100,7 @@ a:active {
 .tooltip .tooltiptextlefttop {
     visibility: hidden;
     width: auto;
-    background-color: black;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     border-radius: 6px;

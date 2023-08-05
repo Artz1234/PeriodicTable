@@ -1,0 +1,15 @@
+:root {
+    --background:#ffffff;
+    --textcolor:#000000;
+}
+body {
+    background-color: var(--background);
+    color: var(--textcolor);
+}
+table{
+    color:var(--textcolor);
+}
+.dark-mode {
+    background-color: #101010;
+    color: #ffffff;
+}

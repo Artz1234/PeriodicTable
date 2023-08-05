@@ -4,8 +4,10 @@
             Periodic Table
         </title>
             <link rel="icon" type="image/x-icon" href="icon.ico">
-    </head>
-    <body bgcolor="#101010" text="#ffffff">
+            <link rel="stylesheet" href="common.css">
+        <script src="common.js"></script>
+</head>
+    <body onload="onload()">
     <style>
             ::-webkit-scrollbar {
                 width: 5px;
@@ -21,7 +23,7 @@
                 background: #555555; 
             }
             a:link {
-              color: #ffffff;
+              color:var(--textcolor);
               background-color: transparent;
               text-decoration: underline;
             }

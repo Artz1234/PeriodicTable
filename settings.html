@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="common.css">
+        <script>
+            function settheme() {
+                var checkBox = document.getElementById("darkmodecheckbox");
+                var root = document.querySelector(":root");
+                if (checkBox.checked == true){
+                    root.style.setProperty("--background","#101010");
+                    root.style.setProperty("--textcolor","#ffffff");
+                    localStorage.removeItem("dark-mode");
+                    localStorage.setItem("dark-mode","yes");
+                }
+                else {
+                    root.style.setProperty("--background","#ffffff");
+                    root.style.setProperty("--textcolor","#000000");
+                    localStorage.removeItem("dark-mode");
+                    localStorage.setItem("dark-mode","no");
+                }
+            }
+            function onload(){
+                var dark=localStorage.getItem("dark-mode");
+                var root = document.querySelector(":root");
+                var checkBox = document.getElementById("darkmodecheckbox");
+                if(dark=="yes"){
+                    root.style.setProperty("--background","#101010");
+                    root.style.setProperty("--textcolor","#ffffff");
+                    checkBox.click();
+                }
+                else if(dark=="no"){
+                }
+                else{
+                    root.style.setProperty("--background","#101010");
+                    root.style.setProperty("--textcolor","#ffffff");
+                    checkBox.click();
+                }
+            }
+        </script>
+    </head>
+    <body onload="onload()">
+        <h2>Settings</h2>
+        Dark Mode: <input type="checkbox" id="darkmodecheckbox" onclick="settheme()"><br/><br/>
+        <a href="index.html">Go back</a>
+    </body>
+</html>
