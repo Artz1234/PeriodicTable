@@ -71,7 +71,7 @@ a:active {
     visibility: hidden;
     width: auto;
     background-color: #000000;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
@@ -90,7 +90,7 @@ a:active {
     visibility: hidden;
     width: auto;
     background-color: #000000;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
@@ -102,7 +102,7 @@ a:active {
     visibility: hidden;
     width: auto;
     background-color: #000000;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
@@ -120,4 +120,10 @@ a:active {
 /*Table*/
 td{
     min-width: var(--minwidth);
+    width:53px;
+    text-align: center;
+    font-size: 25px;
+}
+sub{
+    font-size: 10px;
 }
